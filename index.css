@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:hsl(30, 38%, 92%);
+}
+
+.PreviewCardContent{
+    display: flex;
+    background-color:  hsl(0, 0%, 100%);
+    gap: 30px;
+    width: 540px;
+    margin: 20vh auto auto auto;
+    padding-right:30px;  
+    border-radius: 14px;
+}
+
+.DesktopImg{
+    width: 256px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+.MobileImg{
+    display: none;
+}
+.ProductName{
+    color: hsl(228, 12%, 48%);
+    font-family:"Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.ProductDescription{
+    padding: 10px 0px 20px 0px;
+    color: hsl(228, 12%, 48%);
+    font-family:"Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.ProductDescription > h1{
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+}
+
+.ProductDescription >h2{
+    display:inline;
+    color:hsl(158, 38%, 33%);
+    font-size: 30px;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+.price{
+    position:fixed;
+    margin-top: 9px;
+    font-family:"Montserrat", sans-serif;
+    font-size: 14px;
+    margin-left:15px;
+    text-decoration: line-through;
+}
+
+.fa-cart-shopping{
+    padding-right: 6px;
+}
+button{
+    margin-top: 20px;
+    padding:15px 20px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: 1px solid hsl(158, 36%, 37%);
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(159, 53%, 13%);
+}
+
+
+/*-------------Media Query----------*/
+@media screen and (max-width:375px) {
+    .PreviewCardContent{
+        display: flex;
+        flex-direction: column;
+        gap:0px;
+        width: 320px;
+    }
+    .DesktopImg{
+        display: none;
+    }
+    .MobileImg{
+        display:block;
+        width: 320px;
+        height: 250px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .ProductDescription{
+        padding-left: 30px;
+    }
+    .price{
+        position: relative;
+    }
+}
